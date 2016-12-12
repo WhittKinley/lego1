@@ -17,11 +17,10 @@ ir = InfraredSensor()
 uss = UltrasonicSensor(INPUT_1)
 
 
-leftTire.run
 
-#def getUltrasonic():
-#    ultrasonicSensor.mode='US-DIS-CM'
-#    return ultrasonicSensor.units
+def getUltrasonic():
+    uss.mode='US-DIS-CM'
+    return uss.units
 #
 # def getColor():
 #     colorSensor.mode='COL-REFLECT'
