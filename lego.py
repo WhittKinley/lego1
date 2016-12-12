@@ -1,6 +1,7 @@
 from ev3dev.auto import OUTPUT_A, OUTPUT_B, OUTPUT_D, LargeMotor, MediumMotor
 from ev3dev.auto import INPUT_1, INPUT_2, ColorSensor, UltrasonicSensor
 import time
+import ev3dev.auto as auto
 import ev3dev.ev3 as ev3
 from ev3dev.ev3 import *
 import ev3dev.core as core
@@ -15,8 +16,7 @@ ir = InfraredSensor()
 
 uss = core.UltrasonicSensor(INPUT_1)
 
-if uss.distance_centimeters() != 9999:
-    ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
+
 
 #def getUltrasonic():
 #    ultrasonicSensor.mode='US-DIS-CM'
@@ -30,10 +30,11 @@ if uss.distance_centimeters() != 9999:
 # #def findObject():
 # while getUltrasonic > 5.5:
 
-if(ultrasonicSensor.distance_centimeters(1)):
-    leftTire.run_timed(speed_sp=360, time_sp=600)
-    rightTire.run_timed(speed_sp=360, time_sp=600)
-    time.sleep(1)
+leftTire.run_timed(speed_sp=360, time_sp=600)
+rightTire.run_timed(speed_sp=360, time_sp=600)
+time.sleep(1)
+if uss.distance_centimeters != 0:
+    ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
 #colorSensor.
 
 #ev3.Sound.speak("Hello Ali")
