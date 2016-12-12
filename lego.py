@@ -9,9 +9,9 @@ clawMotor = MediumMotor(OUTPUT_B)
 leftTire = LargeMotor(OUTPUT_A)# and LargeMotor(OUTPUT_D)
 rightTire = LargeMotor(OUTPUT_D)
 
-# def getUltrasonic():
-#     ultrasonicSensor.mode='US-DIS-CM'
-#     return ultrasonicSensor.units
+def getUltrasonic():
+    ultrasonicSensor.mode='US-DIS-CM'
+    return ultrasonicSensor.units
 #
 # def getColor():
 #     colorSensor.mode='COL-REFLECT'
@@ -21,7 +21,7 @@ rightTire = LargeMotor(OUTPUT_D)
 # #def findObject():
 # while getUltrasonic > 5.5:
 
-while(ultrasonicSensor.distance_inches(1)):
+while(not getUltrasonic(2)):
     leftTire.run_timed(speed_sp=360, time_sp=600)
     rightTire.run_timed(speed_sp=360, time_sp=600)
     time.sleep(1)
