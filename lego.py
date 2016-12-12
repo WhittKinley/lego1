@@ -33,7 +33,7 @@ def getUltrasonic():
 leftTire.run_timed(speed_sp=360, time_sp=600)
 rightTire.run_timed(speed_sp=360, time_sp=600)
 time.sleep(1)
-if uss.mode == 0:
+if uss.mode != 0:
     ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
 #colorSensor.
 
