@@ -10,9 +10,9 @@ clawMotor = MediumMotor(OUTPUT_B)
 leftTire = LargeMotor(OUTPUT_A)# and LargeMotor(OUTPUT_D)
 rightTire = LargeMotor(OUTPUT_D)
 
-ir = ev3.core.Sensor()
+ir = ev3.InfraredSensor()
 
-if ir.get != 999:
+if ir.proximity() != 999:
     ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
 
 def getUltrasonic():
