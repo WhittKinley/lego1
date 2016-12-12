@@ -17,7 +17,7 @@ ir = InfraredSensor()
 uss = UltrasonicSensor(INPUT_1)
 
 
-
+leftTire.run
 
 #def getUltrasonic():
 #    ultrasonicSensor.mode='US-DIS-CM'
@@ -34,8 +34,7 @@ uss = UltrasonicSensor(INPUT_1)
 leftTire.run_timed(speed_sp=360, time_sp=600)
 rightTire.run_timed(speed_sp=360, time_sp=600)
 time.sleep(1)
-if uss.distance_centimeters != 0:
-    ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
+ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
 #colorSensor.
 
 #ev3.Sound.speak("Hello Ali")
