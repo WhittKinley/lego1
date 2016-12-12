@@ -10,8 +10,15 @@ clawMotor = MediumMotor(OUTPUT_B)
 leftTire = LargeMotor(OUTPUT_A)# and LargeMotor(OUTPUT_D)
 rightTire = LargeMotor(OUTPUT_D)
 
-ir = ev3.InfraredSensor()
-if (ir.proximity == 1):
+ir = lego.EV3IRSensor(2)
+ir.set_prox_mode() # proximity mode
+ir.get_distance() # for prox mode
+ir.set_remote_mode() # for using the remote control
+ir.get_remote_command() # get remote control command
+ir.set_seek_mode() # follow remote control when button pressed
+ir.get_all_direction_and_distance #  for seek mode
+ir.get_direction_and_distance(chan) #  for seek mode
+if (ir.get_distance() == 1):
     ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
 
 while True:
