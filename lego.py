@@ -59,9 +59,9 @@ ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
 
 clawMotor.run_timed(speed_sp = 720, time_sp = 500)
 time.sleep(1)
-
-leftTire.run_forever(speed_sp = -360)
-rightTire.run_forever(speed_sp = -360)
+while(getUltrasonic() != 0):
+    leftTire.run_timed(speed_sp = -560, time_sp = 500)
+    rightTire.run_timed(speed_sp = -560, time_sp = 500)
 # leftTire.run_timed(speed_sp = 360, time_sp = 600)
 # rightTire.run_timed(speed_sp = 360, time_sp = 600)
 # time.sleep(1)
