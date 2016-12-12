@@ -12,9 +12,8 @@ leftTire = LargeMotor(OUTPUT_A)# and LargeMotor(OUTPUT_D)
 rightTire = LargeMotor(OUTPUT_D)
 ir = InfraredSensor()
 
-if(ir.proximity.value() < 2):
-
-#if ultrasonicSensor.distance_inches != 999:
+while(ultrasonicSensor.distance_centimeters != 1):
+    #if ultrasonicSensor.distance_inches != 999:
     ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
 
 def getUltrasonic():
