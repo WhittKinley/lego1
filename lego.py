@@ -16,14 +16,11 @@ ir = InfraredSensor()
 
 uss = UltrasonicSensor(INPUT_1)
 
-
-@property
 def proximity(self):
     """
     A measurement of the distance between the sensor and the remote,
     as a percentage. 100% is approximately 70cm/27in.
     """
-
     if self.auto_mode:
         self.mode = self.MODE_IR_PROX
 
