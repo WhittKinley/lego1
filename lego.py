@@ -39,12 +39,12 @@ def getUltrasonic():
 # while getUltrasonic > 5.5:
 #while(proximity(self=0) != 0):
 
-ev3.Sound.speak('Making right turn').wait()
-leftTire.run_timed(speed_sp=720, time_sp=600)
-time.sleep(1)
-ev3.Sound.speak('Making left turn').wait()
-rightTire.run_timed(speed_sp=720, time_sp=600)
-time.sleep(1)
+#ev3.Sound.speak('Making right turn').wait()
+#leftTire.run_timed(speed_sp=720, time_sp=600)
+#time.sleep(1)
+#ev3.Sound.speak('Making left turn').wait()
+#rightTire.run_timed(speed_sp=720, time_sp=600)
+#time.sleep(1)
 
 
 ev3.Sound.speak('Going forward').wait()
