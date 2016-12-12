@@ -1,5 +1,5 @@
 from ev3dev.auto import OUTPUT_A, OUTPUT_B, OUTPUT_D, LargeMotor, MediumMotor
-from ev3dev.auto import INPUT_1, INPUT_2, ColorSensor,# UltrasonicSensor
+from ev3dev.auto import INPUT_1, INPUT_2, ColorSensor, UltrasonicSensor
 import time
 import ev3dev.ev3 as ev3
 from ev3dev.ev3 import *
