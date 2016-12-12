@@ -14,7 +14,8 @@ leftTire = LargeMotor(OUTPUT_A)# and LargeMotor(OUTPUT_D)
 rightTire = LargeMotor(OUTPUT_D)
 ir = InfraredSensor()
 
-uss = core.UltrasonicSensor(INPUT_1)
+uss = UltrasonicSensor(INPUT_1)
+
 
 
 
