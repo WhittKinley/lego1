@@ -37,10 +37,10 @@ def getUltrasonic():
 #
 # #def findObject():
 # while getUltrasonic > 5.5:
-while(proximity(self=0) != 0):
-    leftTire.run_timed(speed_sp=360, time_sp=600)
-    rightTire.run_timed(speed_sp=360, time_sp=600)
-    time.sleep(1)
+#while(proximity(self=0) != 0):
+leftTire.run_timed(speed_sp=360, time_sp=600)
+rightTire.run_timed(speed_sp=360, time_sp=600)
+time.sleep(1)
 
 ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
 #colorSensor.
