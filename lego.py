@@ -2,6 +2,7 @@ from ev3dev.auto import OUTPUT_A, OUTPUT_B, OUTPUT_D, LargeMotor, MediumMotor
 from ev3dev.auto import INPUT_1, INPUT_2, ColorSensor, UltrasonicSensor
 import time
 import ev3dev.ev3 as ev3
+from ev3dev.ev3 import *
 
 ultrasonicSensor = UltrasonicSensor(INPUT_1)
 colorSensor = ColorSensor(INPUT_2)
@@ -9,9 +10,12 @@ clawMotor = MediumMotor(OUTPUT_B)
 leftTire = LargeMotor(OUTPUT_A)# and LargeMotor(OUTPUT_D)
 rightTire = LargeMotor(OUTPUT_D)
 
-ev3.InfraredSensor.auto_mode
+ir = ev3.InfraredSensor()
+if (ir.proximity == 1):
+    ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
 
-
+while True:
+    ev3.Leds.set_color(ev3.Leds.LEFT, (ev3.Leds.GREEN, ev3.Leds.RED)[ir.value()])
 
 def getUltrasonic():
     ultrasonicSensor.mode='US-DIS-CM'
