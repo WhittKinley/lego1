@@ -4,13 +4,17 @@ import time
 import ev3dev.ev3 as ev3
 from ev3dev.ev3 import *
 
+
 ultrasonicSensor = UltrasonicSensor(INPUT_1)
 colorSensor = ColorSensor(INPUT_2)
 clawMotor = MediumMotor(OUTPUT_B)
 leftTire = LargeMotor(OUTPUT_A)# and LargeMotor(OUTPUT_D)
 rightTire = LargeMotor(OUTPUT_D)
+ir = InfraredSensor()
 
-if ultrasonicSensor.distance_inches != 999:
+if(ir.value() < 2):
+
+#if ultrasonicSensor.distance_inches != 999:
     ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
 
 def getUltrasonic():
