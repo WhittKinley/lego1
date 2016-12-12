@@ -10,7 +10,7 @@ clawMotor = MediumMotor(OUTPUT_B)
 leftTire = LargeMotor(OUTPUT_A)# and LargeMotor(OUTPUT_D)
 rightTire = LargeMotor(OUTPUT_D)
 
-ir = ev3.EV3IRSensor(2)
+ir = ev3.InfraredSensor(2)
 ir.set_prox_mode() # proximity mode
 ir.get_distance() # for prox mode
 ir.set_remote_mode() # for using the remote control
