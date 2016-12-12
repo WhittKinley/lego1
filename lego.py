@@ -60,39 +60,41 @@ ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
 clawMotor.run_timed(speed_sp = 720, time_sp = 500)
 time.sleep(1)
 
-leftTire.run_timed(speed_sp = 360, time_sp = 600) and rightTire.run_timed(speed_sp = 360, time_sp = 600)
-rightTire.run_timed(speed_sp = 360, time_sp = 600)
-time.sleep(1)
-leftTire.run_timed(speed_sp = 360, time_sp = 600) and rightTire.run_timed(speed_sp = 360, time_sp = 600)
-rightTire.run_timed(speed_sp = 360, time_sp = 600)
-time.sleep(1)
-leftTire.run_timed(speed_sp = 360, time_sp = 600) and rightTire.run_timed(speed_sp = 360, time_sp = 600)
-rightTire.run_timed(speed_sp = 360, time_sp = 600)
-time.sleep(1)
-
-clawMotor.run_timed(speed_sp = -720, time_sp = 500)
-time.sleep(1)
-
-leftTire.run_timed(speed_sp = -360, time_sp = 600) and rightTire.run_timed(speed_sp = 360, time_sp = 600)
-#rightTire.run_timed(speed_sp = -360, time_sp = 600)
-time.sleep(1)
-leftTire.run_timed(speed_sp = -360, time_sp = 600) and rightTire.run_timed(speed_sp = 360, time_sp = 600)
-#rightTire.run_timed(speed_sp = -360, time_sp = 600)
-time.sleep(1)
-
-leftTire.run_timed(speed_sp = -360, time_sp = 1500)
-time.sleep(1)
-
-leftTire.run_timed(speed_sp = 360, time_sp = 600)
-#rightTire.run_timed(speed_sp = 360, time_sp = 600)
-time.sleep(1)
-
-#def findTarget():
-# while getColor > 15:
-#     leftTire.run_timed(power=15, rotations=0.2)
-#     rightTire.run_timed(power=15, rotations=0.2)
-#     time.sleep(1)
-# clawMotor.run_timed(power=75, rotations=-0.8)
+leftTire.run_forever(speed_sp = -360)
+rightTire.run_forever(speed_sp = -360)
+# leftTire.run_timed(speed_sp = 360, time_sp = 600)
+# rightTire.run_timed(speed_sp = 360, time_sp = 600)
 # time.sleep(1)
-
+# leftTire.run_timed(speed_sp = 360, time_sp = 600)
+# rightTire.run_timed(speed_sp = 360, time_sp = 600)
+# time.sleep(1)
+# leftTire.run_timed(speed_sp = 360, time_sp = 600)
+# rightTire.run_timed(speed_sp = 360, time_sp = 600)
+# time.sleep(1)
+#
+# clawMotor.run_timed(speed_sp = -720, time_sp = 500)
+# time.sleep(1)
+#
+# leftTire.run_timed(speed_sp = -360, time_sp = 600)
+# #rightTire.run_timed(speed_sp = -360, time_sp = 600)
+# time.sleep(1)
+# leftTire.run_timed(speed_sp = -360, time_sp = 600)
+# #rightTire.run_timed(speed_sp = -360, time_sp = 600)
+# time.sleep(1)
+#
+# leftTire.run_timed(speed_sp = -360, time_sp = 1500)
+# time.sleep(1)
+#
+# leftTire.run_timed(speed_sp = 360, time_sp = 600)
+# #rightTire.run_timed(speed_sp = 360, time_sp = 600)
+# time.sleep(1)
+#
+# #def findTarget():
+# # while getColor > 15:
+# #     leftTire.run_timed(power=15, rotations=0.2)
+# #     rightTire.run_timed(power=15, rotations=0.2)
+# #     time.sleep(1)
+# # clawMotor.run_timed(power=75, rotations=-0.8)
+# # time.sleep(1)
+#
 
