@@ -21,7 +21,7 @@ rightTire = LargeMotor(OUTPUT_D)
 # #def findObject():
 # while getUltrasonic > 5.5:
 
-ev3.sound.speak("Hello Ali")
+ev3.Sound.speak("Hello Ali")
 
 leftTire.run_timed(speed_sp = 360, time_sp = 600)
 rightTire.run_timed(speed_sp = 360, time_sp = 600)
