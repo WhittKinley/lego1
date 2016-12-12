@@ -21,7 +21,7 @@ def getUltrasonic():
 # #def findObject():
 # while getUltrasonic > 5.5:
 
-while(not ultrasonicSensor.distance_inches(1)):
+if(ultrasonicSensor.distance_centimeters(1)):
     leftTire.run_timed(speed_sp=360, time_sp=600)
     rightTire.run_timed(speed_sp=360, time_sp=600)
     time.sleep(1)
