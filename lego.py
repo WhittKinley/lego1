@@ -37,7 +37,7 @@ def getUltrasonic():
 #
 # #def findObject():
 # while getUltrasonic > 5.5:
-while(proximity() != 0):
+while(proximity(1) != 0):
     leftTire.run_timed(speed_sp=360, time_sp=600)
     rightTire.run_timed(speed_sp=360, time_sp=600)
     time.sleep(1)
