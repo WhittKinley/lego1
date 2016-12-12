@@ -29,3 +29,6 @@ ev3.Sound.speak('Making left turn').wait()
 rightTire.run_timed(speed_sp=720, time_sp=600)
 #rightTire.run_timed(speed_sp=360, time_sp=600)
 time.sleep(1)
+
+ev3.Sound.speak('Rotation').wait()
+rightTire.run_timed(speed_sp=1440, time_sp=600)
