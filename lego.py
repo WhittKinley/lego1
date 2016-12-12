@@ -10,7 +10,7 @@ clawMotor = MediumMotor(OUTPUT_B)
 leftTire = LargeMotor(OUTPUT_A)# and LargeMotor(OUTPUT_D)
 rightTire = LargeMotor(OUTPUT_D)
 
-if ultrasonicSensor.distance_centimeters() != 999:
+if ultrasonicSensor.distance_inches != 999:
     ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
 
 def getUltrasonic():
