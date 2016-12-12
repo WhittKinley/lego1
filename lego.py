@@ -17,6 +17,17 @@ ir = InfraredSensor()
 uss = UltrasonicSensor(INPUT_1)
 
 
+@property
+def proximity(self):
+    """
+    A measurement of the distance between the sensor and the remote,
+    as a percentage. 100% is approximately 70cm/27in.
+    """
+
+    if self.auto_mode:
+        self.mode = self.MODE_IR_PROX
+
+    return self.value(0)
 
 def getUltrasonic():
     uss.mode='US-DIS-CM'
@@ -29,7 +40,7 @@ def getUltrasonic():
 #
 # #def findObject():
 # while getUltrasonic > 5.5:
-while(uss.mode != 0):
+while(proximity() != 0):
     leftTire.run_timed(speed_sp=360, time_sp=600)
     rightTire.run_timed(speed_sp=360, time_sp=600)
     time.sleep(1)
