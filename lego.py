@@ -3,8 +3,8 @@ from ev3dev.auto import INPUT_1, INPUT_2, ColorSensor, UltrasonicSensor
 import time
 import ev3dev.ev3 as ev3
 
-#ultrasonicSensor = UltrasonicSensor(INPUT_1)
-#colorSensor = ColorSensor(INPUT_2)
+ultrasonicSensor = UltrasonicSensor(INPUT_1)
+colorSensor = ColorSensor(INPUT_2)
 clawMotor = MediumMotor(OUTPUT_B)
 leftTire = LargeMotor(OUTPUT_A)# and LargeMotor(OUTPUT_D)
 rightTire = LargeMotor(OUTPUT_D)
@@ -21,17 +21,23 @@ rightTire = LargeMotor(OUTPUT_D)
 # #def findObject():
 # while getUltrasonic > 5.5:
 
-ev3.Sound.speak("Hello Ali")
+while(ultrasonicSensor.auto_mode):
+    leftTire.run_timed(speed_sp=360, time_sp=600)
+    rightTire.run_timed(speed_sp=360, time_sp=600)
+    time.sleep(1)
+#colorSensor.
 
-leftTire.run_timed(speed_sp = 360, time_sp = 600)
-rightTire.run_timed(speed_sp = 360, time_sp = 600)
-time.sleep(1)
-leftTire.run_timed(speed_sp = 360, time_sp = 600) and rightTire.run_timed(speed_sp = 360, time_sp = 600)
-rightTire.run_timed(speed_sp = 360, time_sp = 600)
-time.sleep(1)
-leftTire.run_timed(speed_sp = 360, time_sp = 600) and rightTire.run_timed(speed_sp = 360, time_sp = 600)
-rightTire.run_timed(speed_sp = 360, time_sp = 600)
-time.sleep(1)
+#ev3.Sound.speak("Hello Ali")
+
+#leftTire.run_timed(speed_sp = 360, time_sp = 600)
+#rightTire.run_timed(speed_sp = 360, time_sp = 600)
+#time.sleep(1)
+#leftTire.run_timed(speed_sp = 360, time_sp = 600) and rightTire.run_timed(speed_sp = 360, time_sp = 600)
+#rightTire.run_timed(speed_sp = 360, time_sp = 600)
+#time.sleep(1)
+#leftTire.run_timed(speed_sp = 360, time_sp = 600) and rightTire.run_timed(speed_sp = 360, time_sp = 600)
+#rightTire.run_timed(speed_sp = 360, time_sp = 600)
+#time.sleep(1)
 
 clawMotor.run_timed(speed_sp = 720, time_sp = 500)
 time.sleep(1)
