@@ -9,6 +9,10 @@ clawMotor = MediumMotor(OUTPUT_B)
 leftTire = LargeMotor(OUTPUT_A)# and LargeMotor(OUTPUT_D)
 rightTire = LargeMotor(OUTPUT_D)
 
+ev3.InfraredSensor.auto_mode
+
+
+
 def getUltrasonic():
     ultrasonicSensor.mode='US-DIS-CM'
     return ultrasonicSensor.units
