@@ -21,7 +21,7 @@ rightTire = LargeMotor(OUTPUT_D)
 # #def findObject():
 # while getUltrasonic > 5.5:
 
-while(ultrasonicSensor.auto_mode):
+while(ultrasonicSensor.distance_inches(1)):
     leftTire.run_timed(speed_sp=360, time_sp=600)
     rightTire.run_timed(speed_sp=360, time_sp=600)
     time.sleep(1)
