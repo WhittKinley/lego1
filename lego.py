@@ -12,7 +12,7 @@ rightTire = LargeMotor(OUTPUT_D)
 
 ir = ev3.core.Sensor()
 
-if ir.distance_centimeters != 999:
+if ir.get != 999:
     ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
 
 def getUltrasonic():
