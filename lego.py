@@ -10,19 +10,10 @@ clawMotor = MediumMotor(OUTPUT_B)
 leftTire = LargeMotor(OUTPUT_A)# and LargeMotor(OUTPUT_D)
 rightTire = LargeMotor(OUTPUT_D)
 
-ir = ev3.InfraredSensor()
-ir.set_prox_mode() # proximity mode
-ir.get_distance() # for prox mode
-ir.set_remote_mode() # for using the remote control
-ir.get_remote_command() # get remote control command
-ir.set_seek_mode() # follow remote control when button pressed
-ir.get_all_direction_and_distance #  for seek mode
-ir.get_direction_and_distance(chan) #  for seek mode
-if (ir.get_distance() == 1):
-    ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
+ir = ev3.core.Sensor()
 
-while True:
-    ev3.Leds.set_color(ev3.Leds.LEFT, (ev3.Leds.GREEN, ev3.Leds.RED)[ir.value()])
+if ir.distance_centimeters != 999:
+    ev3.Sound.speak('Welcome to the E V 3 dev project!').wait()
 
 def getUltrasonic():
     ultrasonicSensor.mode='US-DIS-CM'
