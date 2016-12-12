@@ -32,4 +32,4 @@ time.sleep(1)
 
 ev3.Sound.speak('Rotation').wait()
 rightTire.run_timed(speed_sp=720, time_sp=600)
-leftTire.run_timed(speed_sp=-720, time_sp=600)
+rightTire.run_timed(speed_sp=720, time_sp=600)
